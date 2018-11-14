@@ -11,7 +11,8 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import Navigator from './navigator';
 
-const API_URL = 'localhost:3000/graphql/';
+// const API_URL = 'localhost:3000/graphql/';
+const API_URL = 'fathomless-wildwood-69680.herokuapp.com/graphql/';
 
 let TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJWYWxpayIsImlhdCI6MTU0MjE4MjAyNywiZXhwIjoxNTczNzM5NjI3fQ.LeAGCBShFeJZHPMWRtdJTPXTOJN6CpQfa23wa6JQCT8";
 // let TOKEN = null;
@@ -38,18 +39,7 @@ const errorLink = onError((data) => {
     data.graphQLErrors.forEach(({ message }) => {
       console.log({ message });
     });
-
-  //   // if (shouldLogout) {
-  //   //   store.dispatch(logout());
-  //   // }
   }
-  // if (networkError) {
-  //   console.log('[Network error]:');
-  //   console.log({ networkError });
-  //   // if (networkError.statusCode === 401) {
-  //   //   logout();
-  //   // }
-  // }
 });
 
 const requestLink = ({ queryOrMutationLink }) =>
